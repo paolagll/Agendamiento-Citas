@@ -10,16 +10,18 @@
     <h1>Agendamiento de Citas</h1>
    
     <form id="citaForm">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" required>
-        <br>
-        <label for="fechaHora">Fecha y Hora de la Cita:</label>
-        <input type="datetime-local" id="fechaHora" required>
-        <br>
+        <div class="nombreForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+        </div>
+        <div class="fechaForm">
+            <label for="fechaHora">Fecha y Hora de la Cita:</label>
+            <input type="datetime-local" id="fechaHora" required>
+        </div>
         <button type="button" onclick="agregarCita()">Agendar Cita</button>
     </form>
     
-    <div id="listaCitas"></div>
+    <div id="listaCitas" class="lista"></div>
 
     <script src="./Scrip.js"></script>
 </body>
