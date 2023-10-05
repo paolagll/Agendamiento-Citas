@@ -4,22 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamiento de Citas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
-            width: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="./Style.css" />
 </head>
 <body>
     <h1>Agendamiento de Citas</h1>
-    
-    <!-- Formulario para ingresar nueva cita -->
+   
     <form id="citaForm">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" required>
@@ -27,35 +16,11 @@
         <label for="fechaHora">Fecha y Hora de la Cita:</label>
         <input type="datetime-local" id="fechaHora" required>
         <br>
-        <button onclick="agrega"></button>
         <button type="button" onclick="agregarCita()">Agendar Cita</button>
     </form>
     
-    <!-- Lista de citas agendadas -->
     <div id="listaCitas"></div>
 
-    <script>
-        function agregarCita() {
-            // Obtener datos del formulario
-            const nombre = document.getElementById("nombre").value;
-            const fechaHora = document.getElementById("fechaHora").value;
-
-            // Crear una tarjeta para la cita
-            const nuevaCita = document.createElement("div");
-            nuevaCita.className = "card";
-            nuevaCita.innerHTML = `
-                <h2>${nombre}</h2>
-                <p>Fecha y Hora: ${fechaHora}</p>
-            `;
-
-            // Agregar la tarjeta al listado de citas
-            const listaCitas = document.getElementById("listaCitas");
-            listaCitas.appendChild(nuevaCita);
-
-            // Limpiar el formulario
-            document.getElementById("nombre").value = "";
-            document.getElementById("fechaHora").value = "";
-        }
-    </script>
+    <script src="./Scrip.js"></script>
 </body>
 </html>
